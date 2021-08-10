@@ -1,0 +1,11 @@
+.classpath
+.metadata
+.project
+.settings
+target
+*.swp
+/.idea
+*.iml
+/app/ImageJ.app/
+nb-configuration.xml
+/scripts/
