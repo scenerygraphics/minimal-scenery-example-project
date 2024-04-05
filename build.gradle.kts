@@ -19,7 +19,10 @@ repositories {
 dependencies {
     // you can use either Git hashes here to identify a version,
     // or version tags from https://github.com/scenerygraphics/scenery/releases
-    implementation("graphics.scenery:scenery:0.10.1")
+    // the version declaration here also enables to run Gradle with a specific scenery version given,
+    // e.g. ./gradlew -PsceneryVersion=my.scenery.version
+    val sceneryVersion = project.properties["sceneryVersion"] ?: "0.10.1"
+    implementation("graphics.scenery:scenery:$sceneryVersion")
 
     // necessary for logging to work correctly, adjust to the logging
     // framework of your liking
