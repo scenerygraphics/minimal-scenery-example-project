@@ -14,6 +14,10 @@ repositories {
     maven("https://maven.scijava.org/content/groups/public")
     mavenCentral()
     maven("https://jitpack.io")
+    // this allows Gradle to use the local Maven repository in ~/.m2, which can be handy
+    // for local builds. Activate e.g. via ./gradlew -PmavenLocal=true or specifying
+    // mavenLocal=true in gradle.properties.
+    if(project.properties["mavenLocal"] == "true") { mavenLocal() }
 }
 
 dependencies {
