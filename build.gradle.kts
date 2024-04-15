@@ -25,7 +25,7 @@ dependencies {
     // or version tags from https://github.com/scenerygraphics/scenery/releases
     // the version declaration here also enables to run Gradle with a specific scenery version given,
     // e.g. ./gradlew -PsceneryVersion=my.scenery.version
-    val sceneryVersion = project.properties["sceneryVersion"] ?: "0.10.1"
+    val sceneryVersion = project.properties["sceneryVersion"] ?: "0.11.0"
     implementation("graphics.scenery:scenery:$sceneryVersion")
 
     // necessary for logging to work correctly, adjust to the logging
